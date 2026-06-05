@@ -13,32 +13,32 @@ async function main(){
     const db = client.db(dbName);
     const collection = db.collection("User");
 
-    // const data={
-    //     firstName:"SAANA",
-    //     lastName:"PRIYA",
-    //     Phone :"9897656657",
-    //     "City":"Bengaluru"
-    // };
+    const data={
+        firstName:"SAANA",
+        lastName:"PRIYA",
+        Phone :"9897656657",
+        "City":"Bengaluru"
+    };
 
-    // const insertResult = await collection.insertMany([ {
-    //     firstName:"Swara",
-    //     lastName:"hani",
-    //     Phone :"9897656657",
-    //     "City":"Bengaluru"
-    // }]);
-// console.log('Inserted documents =>', insertResult);
+    const insertResult = await collection.insertMany([ {
+        firstName:"Swara",
+        lastName:"hani",
+        Phone :"9897656657",
+        "City":"Bengaluru"
+    }]);
+console.log('Inserted documents =>', insertResult);
 
-// const updateResult = await collection.updateOne({firstName:"Sahana"},{ $set: { firstName:"ANUPAMA"} });
-// console.log("updated name=>",updateResult)
+const updateResult = await collection.updateOne({firstName:"Sahana"},{ $set: { firstName:"ANUPAMA"} });
+console.log("updated name=>",updateResult)
 
-// const findesult = await collection.find();
-// console.log("find the result",findesult);
+const findesult = await collection.find();
+console.log("find the result",findesult);
 
-// const findResult = await collection.findOne();
-// console.log("find the result",findResult);
+const findResult = await collection.findOne();
+console.log("find the result",findResult);
 
-// const updResult= await collection.findOneAndUpdate({firstName:"ANUPAMA"},{$set:{city:"Mysore"}},{returnDocument:"after"});
-// console.log("updated",updResult);
+const updResult= await collection.findOneAndUpdate({firstName:"ANUPAMA"},{$set:{city:"Mysore"}},{returnDocument:"after"});
+console.log("updated",updResult);
 
 const result=await collection.initializeOrderedBulkOp();
 console.log("results are =>",result);
