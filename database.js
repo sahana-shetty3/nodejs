@@ -43,12 +43,12 @@ async function main(){
 const result=await collection.initializeOrderedBulkOp();
 console.log("results are =>",result);
 
-// const indexName = await collection.createIndex({ firstName: 1 });
-// console.log(indexName);
+const indexName = await collection.createIndex({ firstName: 1 });
+console.log(indexName);
 
 
-// const resultIndex= await collection.indexExists("firstName_1");
-// console.log("result index => ",resultIndex)
+const resultIndex= await collection.indexExists("firstName_1");
+console.log("result index => ",resultIndex)
 
 
     // const insertResult = await collection.insertOne([data]);
