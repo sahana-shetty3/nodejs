@@ -51,18 +51,18 @@ const resultIndex= await collection.indexExists("firstName_1");
 console.log("result index => ",resultIndex)
 
 
-    // const insertResult = await collection.insertOne([data]);
-    // console.log("inserted documents=>",insertResult);
+    const insertResult = await collection.insertOne([data]);
+    console.log("inserted documents=>",insertResult);
 
-    // //find a document
-    // const findResult = await collection.find({}).toArray();
-    // console.log("Found documents=>",findResult);
+    //find a document
+    const findResult = await collection.find({}).toArray();
+    console.log("Found documents=>",findResult);
 
-    // const countResult=await collection.countDocuments({});
-    // console.log("count of documents in the collection=>",countResult);
+    const countResult=await collection.countDocuments({});
+    console.log("count of documents in the collection=>",countResult);
 
-    // const result= await collection.find({firstName:"Deep"}).Count();
-    //     console.log("result=>",result);
+    const result= await collection.find({firstName:"Deep"}).Count();
+        console.log("result=>",result);
 
     return "done.";
 }
