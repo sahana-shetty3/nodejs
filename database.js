@@ -1,5 +1,7 @@
 const { MongoClient} =require("mongodb");
 
+const URI =
+"mongodb+srv://namasteNodejs:6CVgoYOchI3viWfW@namastenode.orh9pzy.mongodb.net/";
 
 const client=new MongoClient(URI);
 
